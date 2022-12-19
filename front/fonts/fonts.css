@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'comic-book';
+    src: url('comic_book_bold-webfont.woff2') format('woff2'),
+         url('comic_book_bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'comic-book';
+    src: url('comic_book-webfont.woff2') format('woff2'),
+         url('comic_book-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cubicfive10';
+    src: url('cubicfive10-webfont.woff2') format('woff2'),
+         url('cubicfive10-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'cubicfive10';
+    src: url('cubicfive12-webfont.woff2') format('woff2'),
+         url('cubicfive12-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

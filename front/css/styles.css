@@ -17,6 +17,13 @@ header {
     background: #231f2a;
     z-index: 1000;
 }
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+    color: #ffffff;
+}
 header .container {
     max-width: none;
 }
