@@ -1,0 +1,887 @@
+/*!
+Theme Name: shockwaves
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: shockwaves
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+shockwaves is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	background: #201C26;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 400;
+}
+h1 {
+	font-size: 32px;
+	font-weight: 600;
+	text-align: center;
+	margin: 0 0 40px 0;
+}
+.container {
+	max-width: 1120px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	margin: auto;
+}
+.tabs {
+	width: 100%;
+	display: table;
+}
+.tabs .tab {
+	display: table-cell;
+	vertical-align: middle;
+}
+.button {
+	width: 160px;
+	display: block;
+	background: #FF4383;
+	text-align: center;
+	text-decoration: none;
+	color: #FFF;
+	padding: 10px;
+	border: 1px #FF4383 solid;
+	border-radius: 4px;
+	font-weight: 600;
+	box-sizing: border-box;
+	transition: 0.3s all;
+	cursor: pointer;
+}
+.button:hover {
+	background: none;
+	color: #FF4383;
+}
+
+.wave {
+	width: 103%;
+	position: absolute;
+	left: -6px;
+	overflow: hidden;
+	pointer-events: none;
+}
+.wave .scaler {
+	padding-bottom: 13%;
+}
+.wave svg {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.wave.top {
+	top: -2px;
+}
+.wave.bottom {
+	bottom: -2px;
+}
+.wave.bottom svg {
+	transform: rotate(180deg);
+}
+
+header {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 10px 0;
+	font-weight: 500;
+	font-size: 12px;
+	box-sizing: border-box;
+	background: #231f2a;
+	z-index: 1000;
+}
+header .container {
+	max-width: none;
+}
+header .mooonSociety {
+	width: 140px;
+	display: block;
+}
+header .tab:nth-of-type(1) {
+	text-align: left;
+}
+header .tab:nth-of-type(2) {
+	text-align: right;
+}
+header .social {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px 0 0;
+	border-right: 1px #FFF solid;
+}
+header .social a {
+	padding: 0 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+header .social a img {
+	height: 20px;
+	display: block;
+}
+header nav .hamburger {
+	width: 40px;
+	height: 30px;
+	position: relative;
+	display: none;
+	cursor: pointer;
+}
+header nav .hamburger:before {
+	content: '';
+	width: 100%;
+	height: 3px;
+	background: #FFF;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	transition: 0.3s all;
+}
+header nav .hamburger:after {
+	content: '';
+	width: 100%;
+	height: 3px;
+	background: #FFF;
+	position: absolute;
+	left: 20%;
+	top: 70%;
+	transition: 0.3s all;
+}
+header nav .hamburger.active:before {
+	width: 100%;
+	left: 0;
+	top: 50%;
+	transform: rotate(45deg);
+	background: #FF4383;
+}
+header nav .hamburger.active:after {
+	width: 100%;
+	left: 0;
+	top: 50%;
+	transform: rotate(-45deg);
+	background: #FF4383;
+}
+header .menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+header .menu ul {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 0 0 10px;
+}
+header .menu li {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px;
+}
+header .menu a {
+	transition: 0.3s all;
+	cursor: pointer;
+}
+header .menu a:hover,
+header .menu li.active a{
+	color: #FF4383;
+}
+main {
+	padding: 60px 0;
+	overflow: hidden;
+}
+section.intro {
+	padding: 80px 0 60px 0;
+}
+section.intro .shockwaves {
+	max-width: 100%;
+	display: block;
+	margin: 0 0 60px 0;
+}
+section.intro .title {
+	margin: 0 0 10px 0;
+	font-size: 22px;
+	font-weight: 500;
+}
+section.intro .subtitle {
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	font-weight: 300;
+}
+section.products {
+	padding: 0 0 40px 0;
+}
+section.products:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+section.products .container {
+	padding: 0;
+}
+section.products .product:nth-of-type(3n) {
+	margin: 0;
+}
+section.products .product .no {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+section.products .product .name {
+	font-size: 32px;
+	font-weight: 500;
+	margin: 0 0 20px 0;
+}
+section.products .product .poster {
+	margin: 0 0 20px 0;
+	position: relative;
+}
+section.products .product .poster:before {
+	content: '';
+	display: block;
+	padding-bottom: 81%;
+}
+section.products .product .poster video {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+section.products .product .attribute {
+	height: 35px;
+	font-size: 14px;
+	margin: 0 0 20px 0;
+	font-weight: 300;
+	text-align: center;
+}
+section.products .product.kahuna .attribute {
+	color: #FF4383;
+	font-weight: 500;
+}
+section.products .product .benefits {
+	position: relative;
+	background: #FFF;
+	border-radius: 10px;
+	color: #201C26;
+	padding: 20px;
+	margin: 0 0 20px 0;
+}
+section.products .product .benefits .body {
+	height: 120px;
+	overflow: hidden;
+	transition: 0.7s all;
+}
+section.products .product .benefits:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url("images/gradientVwaves.jpg");
+	background-size: calc(300% + 80px) 100%;
+	opacity: 0.3;
+	border-radius: 10px;
+}
+section.products .product:nth-of-type(1) .benefits:before {
+	background-position: left top;
+}
+section.products .product:nth-of-type(2) .benefits:before {
+	background-position: center top;
+}
+section.products .product:nth-of-type(3) .benefits:before {
+	background-position: right top;
+}
+section.products .product .benefits ol {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	counter-reset: counter;
+}
+section.products .product .benefits ol li {
+	margin: 0 0 10px 0;
+	counter-increment: counter;
+	position: relative;
+	padding: 0 0 0 24px;
+}
+section.products .product .benefits ol li:before {
+	content: counter(counter);
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-weight: 600;
+}
+section.products .product .benefits ol li em {
+	font-size: 12px;
+	display: block;
+}
+section.products .product .price {
+	margin: 0 0 20px 0;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+section.products .product .price span {
+	color: #FF4383;
+}
+section.products .product .button {
+	margin: auto;
+}
+section.products .product .note {
+	margin: 40px 0 0 0;
+	text-align: center;
+	font-size: 12px;
+	font-style: italic;
+}
+section.rogue {
+	background: url("images/gradientHwaves.jpg") center top fixed;
+	background-size: cover;
+	padding: 20% 0;
+	color: #201C26;
+	position: relative;
+}
+section.rogue .tab {
+	width: 50%;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+section.rogue .tab:nth-of-type(1) {
+	padding: 0 20px 0 0;
+}
+section.rogue .tab:nth-of-type(2) {
+	padding: 0 0 0 20px;
+}
+section.rogue .poster {
+	cursor: pointer;
+	background: #201C26;
+	padding: 40px;
+	box-sizing: border-box;
+}
+section.rogue .poster video {
+	width: 100%;
+	height: auto;
+}
+section.rogue .no {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+section.rogue .name {
+	font-size: 32px;
+	font-weight: 500;
+	margin: 0 0 10px 0;
+}
+section.rogue .attribute {
+	font-size: 14px;
+	margin: 0 0 20px 0;
+}
+section.rogue .benefits {
+	margin: 0 0 40px 0;
+}
+section.rogue .button {
+	margin: 0 auto 0 auto;
+}
+section.rogue .benefits ol {
+	position: relative;
+	padding: 0;
+	list-style: none;
+	counter-reset: counter;
+}
+section.rogue .benefits ol li {
+	margin: 0 0 10px 0;
+	counter-increment: counter;
+	position: relative;
+	padding: 0 0 0 20px;
+}
+section.rogue .benefits ol li:before {
+	content: counter(counter);
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-weight: 600;
+}
+section.rogue .benefits ol li span {
+	font-size: 12px;
+	font-style: italic;
+}
+section.meet {
+	padding: 60px 0;
+	position: relative;
+}
+section.meet .contacts {
+	text-align: center;
+}
+section.meet .contacts .contact {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 20px;
+	font-weight: 500;
+}
+section.meet .contacts .contact img {
+	width: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+}
+section.brief {
+	color: #201C26;
+	background: url("images/gradientHwaves.jpg") center fixed;
+	background-size: cover;
+	padding: 20% 0;
+	text-align: center;
+	position: relative;
+}
+section.brief .content {
+	margin: 0 0 40px 0;
+	line-height: 1.7;
+}
+section.brief .button {
+	margin: auto;
+}
+section.partners {
+	padding: 60px 0;
+	overflow: hidden;
+}
+section.partners h1 {
+	margin: 0 0 80px 0;
+}
+section.partners .swiper {
+	height: 100px;
+	margin: 0 -100px;
+}
+section.partners .swiper .swiper-wrapper {
+	transition-timing-function: linear;
+}
+section.partners .swiper-slide {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+section.partners .swiper img {
+	max-width: 140px;
+	height: auto;
+	max-height: 60px;
+	width: auto;
+	display: block;
+	margin: auto;
+}
+section.howto {
+	color: #201C26;
+	background: url("images/gradientHwaves.jpg") center bottom fixed;
+	background-size: cover;
+	padding: 20% 0;
+	position: relative;
+}
+section.howto .faq {
+	width: calc(100% - 80px);
+	margin: 0 auto 80px auto;
+}
+section.howto .faq .plain {
+	padding: 10% 0 13% 0;
+	position: relative;
+}
+section.howto .faq .plain:before {
+	content: '';
+	width: 100%;
+	padding-bottom: 10%;
+	display: block;
+	background: url("images/mask4.svg") center top no-repeat;
+	background-size: 100% auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+section.howto .faq .plain:after {
+	content: '';
+	width: 100%;
+	padding-top: 13%;
+	display: block;
+	background: url("images/mask4.svg") center bottom no-repeat;
+	background-size: 100% auto;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+section.howto .hole {
+	background: #201C26;
+	color: #FFF;
+	padding: 60px 0;
+}
+section.howto .accordeon {
+
+}
+section.howto .accordeon .key {
+	padding: 40px 80px 20px 0;
+	position: relative;
+	border-bottom: 1px #FFF solid;
+	cursor: pointer;
+}
+section.howto .head {
+	position: relative;
+	padding: 0 0 20px 0;
+	font-size: 28px;
+}
+section.howto .accordeon .key:hover .head,
+section.howto .accordeon .key[data-state="down"] .head{
+	color: #FF4383;
+}
+section.howto .extension {
+	position: relative;
+	margin: 0 0 20px 0;
+	overflow: hidden;
+	line-height: 1.7;
+	display: none;
+}
+section.howto .extension p {
+	margin: 0;
+}
+section.howto .expandBtn {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top: 36px;
+	transition: 0.3s all;
+	cursor: pointer;
+}
+section.howto .expandBtn:before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	display: block;
+	background: #FFF;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -1px;
+	transition: 0.3s all;
+}
+section.howto .expandBtn:after {
+	content: '';
+	width: 2px;
+	height: 100%;
+	display: block;
+	background: #FFF;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -1px;
+	transition: 0.3s all;
+}
+section.howto .key[data-state="up"]:hover .expandBtn {
+	transform: rotate(90deg);
+}
+section.howto .key[data-state="up"]:hover .expandBtn:before,
+section.howto .key[data-state="up"]:hover .expandBtn:after {
+	background: #FF4383;
+}
+section.howto .key[data-state="down"] .expandBtn:before {
+	background: #FF4383;
+}
+section.howto .key[data-state="down"] .expandBtn:after {
+	opacity: 0;
+}
+section.howto .content {
+	margin: 0 0 40px 0;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 1.7;
+}
+section.howto .button {
+	margin: auto;
+}
+section.services {
+	position: relative;
+	overflow: hidden;
+}
+section.services .swiper {
+	margin: 0 -100px;
+}
+section.services .service {
+	background: #FFF;
+	border-radius: 10px;
+	position: relative;
+}
+section.services .service .content {
+	position: relative;
+	padding: 40px;
+	color: #201C26;
+	line-height: 1.7;
+}
+section.services .service .content .title {
+	height: 110px;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2;
+	margin: 0 0 20px 0;
+}
+section.services .service .content .title span {
+	font-size: 20px;
+	line-height: 1.2;
+	display: block;
+}
+section.services .service .content img {
+	width: 100%;
+	display: block;
+	margin: 0 0 20px 0;
+}
+section.services .service .content .body {
+	height: 120px;
+	overflow: hidden;
+	transition: 0.7s all;
+}
+section.services .service .content .body p {
+	margin: 0 0 22px;
+}
+section.services .service .content .body ul {
+	margin: 0;
+}
+section.services .service .content .body ul li {
+	margin: 0;
+}
+section.services .service:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url("images/gradientVwaves.jpg") no-repeat;
+	background-size: calc(300% + 80px) 100%;
+	opacity: 0.3;
+	border-radius: 10px;
+}
+section.services .swiper-slide:nth-of-type(1n) .service:before {
+	background-position: left top;
+}
+section.services .swiper-slide:nth-of-type(2n) .service:before {
+	background-position: center top;
+}
+section.services .swiper-slide:nth-of-type(3n) .service:before {
+	background-position: right top;
+}
+.moreBtn {
+	margin: 20px 0 0 0;
+	padding: 10px 0 18px 0;
+	border-top: 1px #707070 solid;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	transition: 0.3s all;
+	cursor: pointer;
+}
+.moreBtn[data-status="more"] .more {
+	display: block;
+}
+.moreBtn[data-status="more"] .less {
+	display: none;
+}
+.moreBtn[data-status="less"] .more,
+.moreBtn .more {
+	display: none;
+}
+.moreBtn[data-status="less"] .less,
+.moreBtn .less {
+	display: block;
+}
+.moreBtn:after {
+	content: '';
+	width: 18px;
+	height: 18px;
+	background: url("images/bottomBlackCarret.svg") center no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+	bottom: 0;
+	transition: 0.3s all;
+}
+.moreBtn[data-status="more"]:after {
+	transform: rotate(180deg);
+}
+.moreBtn:hover {
+	color: #FF4383;
+}
+.moreBtn:hover:after {
+	background: url("images/bottomMagentaCarret.svg") center no-repeat;
+	background-size: contain;
+}
+footer {
+	text-align: center;
+	padding: 20px 0 80px 0;
+}
+footer .block {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 20px;
+}
+footer a {
+	color: #FFF;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #FF4383;
+}
+.bobba {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	right: -5%;
+	top: 0%;
+	z-index: 999;
+}
+.bobba .bubble {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	mix-blend-mode: hard-light;
+}
+.bobba .bubble:nth-of-type(1) {
+	background: #5DF0EC;
+	filter: blur(10px);
+}
+.bobba .bubble:nth-of-type(2) {
+	background: #FF4383;
+	filter: blur(10px);
+	left: 20%;
+	top: -10%;
+}
+.bobba .bubble:nth-of-type(3) {
+	background: #70dfaa;
+	filter: blur(10px);
+	left: 20%;
+	top: 10%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	header .social a:hover .path {
+		fill: #FF4383;
+		transition: 0.3s all;
+	}
+	header .mooonSociety:hover .logo-hover {
+		fill: #3afe16;
+		transition: 0.3s all;
+	}
+}
+
+@media only screen and (max-width: 960px){
+	header .social {
+		display: none;
+	}
+	header nav .hamburger {
+		display: inline-block;
+	}
+	header nav .menu {
+		width: 100%;
+		height: calc(100% - 55px);
+		position: fixed;
+		left: 0;
+		top: 55px;
+		display: none;
+		background: #201C26;
+	}
+	header nav .menu ul {
+		display: block;
+	}
+	header nav .menu li {
+		display: block;
+		text-align: center;
+		font-size: 22px;
+		margin: 0 0 20px 0;
+	}
+	header nav .menu.active {
+		display: block;
+	}
+	header nav .social {
+		width: 100%;
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		text-align: center;
+		padding: 20px 0;
+	}
+	header .social a img {
+		height: 30px;
+	}
+	section.intro .button {
+		margin: 32px auto 16px auto;
+	}
+	section.products .product .benefits .body {
+		height: 140px;
+	}
+	section.rogue .tab {
+		width: auto;
+		display: block;
+	}
+	section.rogue .tab:nth-of-type(1) {
+		padding: 0;
+		margin: 0 0 40px 0;
+	}
+	section.rogue .tab:nth-of-type(2) {
+		padding: 0;
+	}
+	section.rogue,
+	section.brief,
+	section.howto {
+		background: url("images/gradientForMobile.jpg?v=2") center top;
+		background-size: 100% auto;
+	}
+	.bobba {
+		display: none;
+	}
+	section.howto .faq {
+		width: 100%;
+		margin: 0 0 80px 0;
+	}
+	section.howto .head {
+		font-size: 20px;
+	}
+	section.howto .accordeon .key {
+		padding: 40px 50px 20px 0;
+	}
+	section.services .swiper {
+		margin: 0;
+	}
+	section.services .service .content {
+		padding: 20px;
+	}
+	section.services .service .content .title {
+		height: 90px;
+		font-size: 22px;
+	}
+	section.services .service .content .title span {
+		font-size: 18px;
+	}
+	footer .block {
+		display: block;
+		text-align: center;
+	}
+}
+
+
